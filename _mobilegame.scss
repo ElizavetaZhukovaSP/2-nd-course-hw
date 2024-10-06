@@ -1,0 +1,51 @@
+@media (max-width: 767px){
+    .center{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .top{
+        height: 700px;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        background-image: url(img/starmobil.svg);
+        background-position: -100% 2000%;
+        &__content{
+            width: 342px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 147px;
+        }
+        &__title{
+            font-size: 40px;
+            line-height: 49px;
+            text-align: center;
+        }
+        &__text{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: center;
+        }
+        &__button{
+            width: 285px;
+            height: 55px;
+            font-size: 16px;
+            margin-top: 36px;
+        }
+    }
+
+    .info-box{
+        display: none;
+    }
+
+
+
+
+}   
+@media (max-width: 340px){
+    .top{
+        background-position: -20% 2000%;
+    }
+} 

@@ -55,6 +55,7 @@ body {
   line-height: 32px;
   text-align: left;
   padding-top: 24px;
+  max-width: 720px;
 }
 
 .top__button {
@@ -179,4 +180,51 @@ body {
   font-weight: 700;
   line-height: 39px;
   text-align: left;
+}
+
+@media (max-width: 767px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .top {
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    background-image: url(img/starmobil.svg);
+    background-position: -100% 2000%;
+  }
+  .top__content {
+    width: 342px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 147px;
+  }
+  .top__title {
+    font-size: 40px;
+    line-height: 49px;
+    text-align: center;
+  }
+  .top__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+  }
+  .top__button {
+    width: 285px;
+    height: 55px;
+    font-size: 16px;
+    margin-top: 36px;
+  }
+  .info-box {
+    display: none;
+  }
+}
+@media (max-width: 340px) {
+  .top {
+    background-position: -20% 2000%;
+  }
 }/*# sourceMappingURL=stylegame.css.map */

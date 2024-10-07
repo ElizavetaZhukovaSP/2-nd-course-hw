@@ -28,7 +28,7 @@ body {
   background-color: #E1FF8F;
   background-image: url(img/startop.svg);
   background-repeat: no-repeat;
-  background-position: -7% 90%;
+  background-position: calc(100% + 375px) calc(0% - 335px);
   background-size: auto;
 }
 
@@ -82,7 +82,7 @@ body {
   background-image: url(img/starinfo.svg);
   height: 1470px;
   background-repeat: no-repeat;
-  background-position: 100% 10%;
+  background-position: calc(100% + 35px) calc(0% - 35px);
   background-size: auto;
 }
 
@@ -119,19 +119,19 @@ body {
   gap: 32px;
 }
 
-.content__block1 {
+.content-block1 {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
 
-.content__block2 {
+.content-block2 {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
 
-.content__block3 {
+.content-block3 {
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -182,6 +182,56 @@ body {
   text-align: left;
 }
 
+.game-box {
+  background-color: #202027;
+  background-image: url(img/starinfo.svg);
+  height: 3500px;
+  background-repeat: no-repeat;
+  background-position: calc(100% + 35px) calc(0% - 35px);
+  background-size: auto;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding-top: 46px;
+  padding-bottom: 144px;
+}
+
+.game__content {
+  display: grid;
+}
+
+.content-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  border-radius: 30px;
+  box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.13);
+  background: rgb(255, 255, 255);
+  height: 500px;
+}
+
+.button-play {
+  box-sizing: border-box;
+  border: 1px solid rgb(32, 32, 39);
+  border-radius: 60px;
+  background: rgb(32, 32, 39);
+  width: 247px;
+  height: 66px;
+  margin-top: 48px;
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 141.69%;
+  text-align: center;
+}
+.button-play:hover {
+  background: white;
+  color: black;
+}
+
 @media (max-width: 767px) {
   .center {
     padding-left: 16px;
@@ -193,7 +243,7 @@ body {
     justify-content: center;
     align-items: start;
     background-image: url(img/starmobil.svg);
-    background-position: -100% 2000%;
+    background-position: calc(100% + 125px) calc(0% - 95px);
   }
   .top__content {
     width: 342px;

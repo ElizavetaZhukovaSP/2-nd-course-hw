@@ -9,7 +9,7 @@
         justify-content: center;
         align-items: start;
         background-image: url(img/starmobil.svg);
-        background-position: -100% 2000%;
+        background-position: calc(100% + 125px) calc(0% - 95px);
         &__content{
             width: 342px;
             display: flex;

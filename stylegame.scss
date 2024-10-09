@@ -75,7 +75,7 @@ body{
 .info-box{
     background-color: #202027;
     background-image: url(img/starinfo.svg);
-    height: 1470px;
+    min-height: 1470px;
     background-repeat: no-repeat;
     background-position: calc(100% + 35px) calc(0% - 35px);
     background-size: auto;
@@ -175,11 +175,11 @@ body{
 }
 .game-box{
     background-color: #202027;
-    background-image: url(img/starinfo.svg);
-    height: 3500px;
+    background-image: url(img/ministar.svg);
     background-repeat: no-repeat;
-    background-position: calc(100% + 35px) calc(0% - 35px);
+    background-position: calc(90% + 35px) calc(0% + 100px);
     background-size: auto;
+    
 }
 .game{
     display: flex;
@@ -190,20 +190,55 @@ body{
 
 }
 .game__content{
-    display: grid
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px;
+    margin-top: 72px;
 
 }
 .content-right{
+    grid-column: span 12;
     display: flex;
-    flex-direction: column;
-    justify-content: start;
+    flex-direction: row-reverse;
     border-radius: 30px;
     box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.13);
     background: rgb(255, 255, 255);
     height: 500px;
 }
+.content-left{
+    grid-column: span 12;
+    display: flex;
+    flex-direction: row;
+    border-radius: 30px;
+    box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.13);
+    background: rgb(255, 255, 255);
+    height: 500px;
+}
+.game__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    flex-wrap: wrap;
+    margin: 48px;
+    width: 600px;
 
+}
+.game__name{
+    color: rgb(32, 32, 39);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 59px;
+    text-align: left;
+}
+.game__text{
+    color: rgb(32, 32, 39);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    padding-top: 24px;
 
+}
 .button-play{
     box-sizing: border-box;
     border: 1px solid rgb(32, 32, 39);
@@ -211,7 +246,7 @@ body{
     background: rgb(32, 32, 39);
     width: 247px;
     height: 66px;
-    margin-top: 48px;
+    margin-top: 36px;
     color: rgb(255, 255, 255);
     font-size: 24px;
     font-weight: 600;
@@ -223,7 +258,24 @@ body{
         
     }
 }
+.footer-box{
+    height: 800px;
+    background-color: rgb(189, 237, 53);;
+    height: 150px;
+}
+.footer__content{
+    display: flex;
+    justify-content: center;
 
+}
+.footer__text{
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    text-align: center;
+    padding-top: 61px;
+}
 
 
 @import 'mobilegame';

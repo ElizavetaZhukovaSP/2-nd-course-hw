@@ -1,3 +1,4 @@
+
 //task1
 let password = prompt ("Введите пароль");
 if (password === 'пароль') {
@@ -67,3 +68,38 @@ switch (monthNumber) {
     default:
         console.log('Ввели что-то не то');
 }
+//Additional tasks 1
+const parity = prompt('Пожалуйста, введите любое число');
+const result = Number(parity);
+if (result % 2 == 0) {
+    alert('Число четное');
+}
+else if (isNaN(result)){
+    alert('Ввели что-то не то');
+}
+else {
+    alert('Число нечетное');
+}
+//Additional tasks 2 and 3
+let clientOS = prompt('Выбрете приложение для установки 0 — iOS, 1 — Android');
+var OS = Number(clientOS);
+let clientDeviceYear = prompt('Пожалуйста, уточните год выпуска телефона');
+const year = Number(clientDeviceYear);
+if(OS === 0 && year >= 2015) {
+    console.log('Установите версию приложения для iOS по ссылке');
+    alert('Установите версию приложения для iOS по ссылке');
+}
+else if(OS === 0 && year < 2015) {
+    alert('Установите облегченную версию приложения для iOS по ссылке');
+}
+else if (OS === 1 && year >= 2015) {
+    console.log('Установите версию приложения для Android по ссылке');
+    alert('Установите версию приложения для Android по ссылке');
+}
+else if(OS === 1 && year < 2015) {
+    alert('Установите облегченную версию приложения для Android по ссылке');
+}
+else {
+    alert('Ввели что-то не то');
+}
+

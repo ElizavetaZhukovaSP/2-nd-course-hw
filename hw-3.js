@@ -82,7 +82,7 @@ else {
 }
 //Additional tasks 2 and 3
 let clientOS = prompt('Выбрете приложение для установки 0 — iOS, 1 — Android');
-var OS = Number(clientOS);
+let OS = Number(clientOS);
 let clientDeviceYear = prompt('Пожалуйста, уточните год выпуска телефона');
 const year = Number(clientDeviceYear);
 if(OS === 0 && year >= 2015) {

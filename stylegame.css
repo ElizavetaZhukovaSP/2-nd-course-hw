@@ -144,7 +144,7 @@ body {
   border-radius: 30px;
   box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.13);
   background: rgb(255, 255, 255);
-  width: 378px;
+  max-width: 378px;
   transition: transform 0.2s;
 }
 .content:hover {
@@ -212,7 +212,7 @@ body {
   border-radius: 30px;
   box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.13);
   background: rgb(255, 255, 255);
-  height: 500px;
+  min-height: 500px;
 }
 
 .content-left {
@@ -222,7 +222,11 @@ body {
   border-radius: 30px;
   box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.13);
   background: rgb(255, 255, 255);
-  height: 500px;
+  min-height: 500px;
+}
+
+.game__img {
+  max-height: 500px;
 }
 
 .game__item {
@@ -231,7 +235,7 @@ body {
   justify-content: start;
   flex-wrap: wrap;
   margin: 48px;
-  width: 600px;
+  max-width: 600px;
 }
 
 .game__name {
@@ -290,10 +294,17 @@ body {
   padding-top: 61px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 699px) {
   .center {
     padding-left: 16px;
     padding-right: 16px;
+  }
+  .heading {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 49px;
+    text-align: left;
   }
   .top {
     height: 700px;
@@ -330,9 +341,145 @@ body {
   .info-box {
     display: none;
   }
+  .game__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 48px;
+  }
+  .content-right {
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+  }
+  .content-left {
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+  }
+  .game {
+    padding-bottom: 48px;
+  }
+  .game-box {
+    background-image: none;
+  }
+  .game__item {
+    margin: 30px;
+  }
+  .game__name {
+    display: flex;
+    flex-direction: column;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+  }
+  .game__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    padding-top: 16px;
+  }
+  .button-form {
+    display: flex;
+    justify-content: center;
+  }
+  .button-play {
+    max-width: 285px;
+    height: 55px;
+    margin-top: 28px 16px;
+    font-size: 16px;
+    margin-top: 32px;
+  }
+  .footer-box {
+    height: 100px;
+  }
+  .footer__text {
+    font-size: 16px;
+    line-height: 20px;
+    padding-top: 40px;
+  }
 }
 @media (max-width: 340px) {
   .top {
-    background-position: -20% 2000%;
+    background-position: calc(100% + 120px) calc(0% - 90px);
+  }
+}
+@media (max-width: 1024px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .info-box {
+    display: none;
+  }
+  .content-right {
+    grid-column: span 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .content-left {
+    grid-column: span 6;
+    display: flex;
+    flex-direction: column;
+  }
+  .game__item {
+    margin: 30px;
+  }
+  .game__name {
+    display: flex;
+    flex-direction: column;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+  }
+  .game__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    padding-top: 16px;
+  }
+  .button-form {
+    display: flex;
+    justify-content: center;
+  }
+  .button-play {
+    max-width: 285px;
+    height: 55px;
+    margin-top: 28px 16px;
+    font-size: 16px;
+    margin-top: 32px;
+  }
+}
+@media (min-width: 700px) and (max-width: 833px) {
+  .center {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .top {
+    background-image: url(img/starmobil.svg);
+    background-position: calc(100% + 125px) calc(0% - 95px);
+  }
+  .top__title {
+    font-size: 56px;
+  }
+  .info-box {
+    display: none;
+  }
+  .game__content {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 16px;
+    margin-top: 48px;
+  }
+  .content-right {
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+  }
+  .content-left {
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
   }
 }/*# sourceMappingURL=stylegame.css.map */

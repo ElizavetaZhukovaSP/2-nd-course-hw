@@ -135,7 +135,7 @@ body{
     border-radius: 30px;
     box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.13);
     background: rgb(255, 255, 255);
-    width: 378px;
+    max-width: 378px;
     transition: transform 0.2s;
     &:hover{
         transform: scale(1.05);
@@ -203,7 +203,7 @@ body{
     border-radius: 30px;
     box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.13);
     background: rgb(255, 255, 255);
-    height: 500px;
+    min-height: 500px;
 }
 .content-left{
     grid-column: span 12;
@@ -212,7 +212,10 @@ body{
     border-radius: 30px;
     box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.13);
     background: rgb(255, 255, 255);
-    height: 500px;
+    min-height: 500px;
+}
+.game__img{
+    max-height: 500px;
 }
 .game__item{
     display: flex;
@@ -220,7 +223,7 @@ body{
     justify-content: start;
     flex-wrap: wrap;
     margin: 48px;
-    width: 600px;
+    max-width: 600px;
 
 }
 .game__name{
@@ -279,3 +282,4 @@ body{
 
 
 @import 'mobilegame';
+@import 'tabletgame';

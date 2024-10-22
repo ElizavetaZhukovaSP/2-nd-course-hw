@@ -213,6 +213,7 @@ body {
   box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.13);
   background: rgb(255, 255, 255);
   min-height: 500px;
+  justify-content: space-between;
 }
 
 .content-left {
@@ -223,6 +224,7 @@ body {
   box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.13);
   background: rgb(255, 255, 255);
   min-height: 500px;
+  justify-content: space-between;
 }
 
 .game__img {

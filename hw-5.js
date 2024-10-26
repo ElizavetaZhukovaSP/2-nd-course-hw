@@ -46,7 +46,7 @@ alert(salutation(age));
 
 //task5
 function number(c, d) {
-    if (isNaN(c, d) || isNaN(c) || isNaN(d)) {
+    if (isNaN(c) || isNaN(d)) {
         return `Одно или оба значения не являются числом`;      
     } else {
         return c * d;}

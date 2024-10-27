@@ -44,11 +44,73 @@ function SimpleArithmetic() {
     } else { 
       alert(`Неверно! Попробуй еще:)`);
     }
-   }
-  const more = prompt('Может быть решишь еще? Если нет, то ничего не вводите или нажмите "Отмена"')
+  }
+  const more = confirm('Может быть решишь еще? Если нет, то нажми "Отмена"')
    if (more) {
     SimpleArithmetic()
-   }
+  }
     
 }
 
+function FlipText(){
+
+  function reverseText(text) {
+    return text.split("").reverse().join("");
+  }
+  const userInput = prompt("Введите текст, который вы хотите перевернуть");
+  const reversedText = reverseText(userInput);
+  alert("Перевернутый текст: " + reversedText);
+
+  const more = confirm('Может быть хочешь еще? Если нет, то нажми "Отмена"')
+  if (more) {
+    FlipText()
+  }
+}
+
+function Quiz(){
+  // Массив вопросов и правильных ответов
+  const quiz = [
+    {
+      question: "Какого цвета небо?",
+      options: ["1. Красный", "2. Синий", "3. Зеленый"],
+      correctAnswer: 2 // номер правильного ответа
+    },
+    {
+      question: "Сколько дней в неделе?",
+      options: ["1. Шесть", "2. Семь", "3. Восемь"],
+      correctAnswer: 2
+    },
+    {
+      question: "Сколько у человека пальцев на одной руке?",
+      options: ["1. Четыре", "2. Пять", "3. Шесть"],
+      correctAnswer: 2
+    }
+  ];
+
+  // Функция для проверки правильности ответа пользователя
+  function checkAnswer(userAnswer, correctAnswer) {
+    return userAnswer === correctAnswer;
+  }
+
+  // Подсчёт количества правильных ответов
+  let correctAnswers = 0;
+
+  // Отображение вопросов и вариантов ответов пользователю
+  for (let i = 0; i < quiz.length; i++) {
+      const question = quiz[i];
+      console.log("Вопрос №" + (i + 1));
+      console.log(question.question);
+      const userAnswer = +prompt(`Введите номер варианта ответа на: \n${quiz[i].question} \n ${quiz[i].options}`);
+      console.log(userAnswer);
+    if (checkAnswer(userAnswer, question.correctAnswer)) {
+      correctAnswers++;
+    }
+    
+    // Запрос ответа от пользователя и проверка правильности
+    
+  }
+
+  // Вывод результата викторины
+  alert("Вы правильно ответили на " + correctAnswers + " вопросов из " + quiz.length + ".");
+
+}

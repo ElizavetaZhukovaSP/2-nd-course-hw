@@ -44,21 +44,10 @@ function SimpleArithmetic() {
       alert(`Неверно! Попробуй еще:)`);
     }
    }
-
-  while (true){ // решение второй задачи
-    let taskStringToo = [`${randomNum2} ${matSigns[result]}  ${randomNum2}`];
-    let taskToo = Math.floor(eval(`${randomNum2} ${matSigns[result]} ${randomNum2}`));
-    console.log(taskToo);
-    let answerToo = +prompt (`Давай еще : ${taskStringToo.join()}`);
-    
-    if (answerToo === taskToo) {
-      alert('Молодец! Правильно!');
-      break;
-    } else { 
-      alert(`Неверно! Попробуй еще:)`);
-    }
-  }
-   
+  const more = prompt('Может быть решишь еще? Если нет, то ничего не вводите или нажмите "Отмена"')
+   if (more) {
+    SimpleArithmetic()
+   }
     
 }
 

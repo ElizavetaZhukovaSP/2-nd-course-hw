@@ -16,16 +16,16 @@ numbers = numbers.join(' ');
 console.log(numbers);
 
 //task4
-let much = [
-    [1, 1, 1],
-    [1, 1, 1],
-    [1, 1, 1]
-]
-for ( let muchIn of much) {
-    for (let element of muchIn) {
-        console.log(element);
+const much = [];
+
+for ( let i = 0; i <3; i++) {
+    const muchIn = [];
+    for (let i = 0; i <3; i++) {
+        muchIn.push(1);
     }
+    much.push(muchIn);
 }
+console.log(much);
 
 //task5
 let one = [1, 1, 1];

@@ -15,6 +15,7 @@ function GuessNumber() {
     }
     
 }
+
 function SimpleArithmetic() {
   function generateProduct( min, max) {
     min = Math.ceil(min);
@@ -50,5 +51,4 @@ function SimpleArithmetic() {
    }
     
 }
-
 

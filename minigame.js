@@ -114,3 +114,6 @@ function Quiz(){
   alert("Вы правильно ответили на " + correctAnswers + " вопросов из " + quiz.length + ".");
 
 }
+function RockScissorsPaper () {
+  
+}

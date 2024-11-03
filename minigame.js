@@ -107,7 +107,7 @@ function Quiz(){
     }
   
   }
-  alert("Вы правильно ответили на " + correctAnswers + " вопросов из " + quiz.length + ".");
+alert("Вы правильно ответили на " + correctAnswers + " вопросов из " + quiz.length + ".");
 
 }
 function RockScissorsPaper () {
@@ -141,4 +141,8 @@ function RockScissorsPaper () {
   alert(`${userChoice} против ${computerChoice}`);
   alert(determineWinner(userChoice, computerChoice));
 
+  const more = confirm('Может быть хочешь еще? Если нет, то нажми "Отмена"')
+  if (more) {
+    RockScissorsPaper()
+  } 
 }

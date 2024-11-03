@@ -105,15 +105,40 @@ function Quiz(){
     if (checkAnswer(userAnswer, question.correctAnswer)) {
       correctAnswers++;
     }
-    
-    // Запрос ответа от пользователя и проверка правильности
-    
+  
   }
-
-  // Вывод результата викторины
   alert("Вы правильно ответили на " + correctAnswers + " вопросов из " + quiz.length + ".");
 
 }
 function RockScissorsPaper () {
-  
+  // Функция для генерации случайного числа
+  function getRandomNumber() {
+    return Math.floor(Math.random() * 3);
+  }
+
+  // Функция для определения победителя
+  function determineWinner(userChoice, computerChoice) {
+    if (userChoice === computerChoice) {
+      return "Ничья";
+    } else if (userChoice === "камень" && computerChoice === "ножницы") {
+      return "Пользователь выиграл";
+    } else if (userChoice === "бумага" && computerChoice === "камень") {
+      return "Пользователь выиграл";
+    } else if (userChoice === "ножницы" && computerChoice === "бумага") {
+      return "Пользователь выиграл";
+    } else {
+      return "Компьютер выиграл";
+    }
+  }
+
+  // Получение выбора пользователя
+  let userChoice = prompt("Выберите 'камень', 'ножницы' или 'бумага'");
+
+  // Генерация случайного выбора компьютера
+  let computerChoice = ["камень", "ножницы", "бумага"][getRandomNumber()];
+
+  // Вывод результата
+  alert(`${userChoice} против ${computerChoice}`);
+  alert(determineWinner(userChoice, computerChoice));
+
 }

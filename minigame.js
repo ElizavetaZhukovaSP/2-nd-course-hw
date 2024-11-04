@@ -107,7 +107,7 @@ function Quiz(){
     }
   
   }
-  alert("Вы правильно ответили на " + correctAnswers + " вопросов из " + quiz.length + ".");
+alert("Вы правильно ответили на " + correctAnswers + " вопросов из " + quiz.length + ".");
 
 }
 function RockScissorsPaper () {
@@ -117,14 +117,14 @@ function RockScissorsPaper () {
   }
 
   // Функция для определения победителя
-  function determineWinner(userChoice, computerChoice) {
-    if (userChoice === computerChoice) {
+  function determineWinner(userChoiceLC, computerChoice) {
+    if (userChoiceLC === computerChoice) {
       return "Ничья";
-    } else if (userChoice === "камень" && computerChoice === "ножницы") {
+    } else if (userChoiceLC === "камень" && computerChoice === "ножницы") {
       return "Пользователь выиграл";
-    } else if (userChoice === "бумага" && computerChoice === "камень") {
+    } else if (userChoiceLC === "бумага" && computerChoice === "камень") {
       return "Пользователь выиграл";
-    } else if (userChoice === "ножницы" && computerChoice === "бумага") {
+    } else if (userChoiceLC === "ножницы" && computerChoice === "бумага") {
       return "Пользователь выиграл";
     } else {
       return "Компьютер выиграл";
@@ -133,12 +133,19 @@ function RockScissorsPaper () {
 
   // Получение выбора пользователя
   let userChoice = prompt("Выберите 'камень', 'ножницы' или 'бумага'");
+  let userChoiceLC = userChoice.toLowerCase();
+  
 
   // Генерация случайного выбора компьютера
   let computerChoice = ["камень", "ножницы", "бумага"][getRandomNumber()];
 
-  // Вывод результата
-  alert(`${userChoice} против ${computerChoice}`);
-  alert(determineWinner(userChoice, computerChoice));
 
+  // Вывод результата
+  alert(`${userChoiceLC} против ${computerChoice}`);
+  alert(determineWinner(userChoiceLC, computerChoice));
+
+  const more = confirm('Может быть хочешь еще? Если нет, то нажми "Отмена"')
+  if (more) {
+    RockScissorsPaper()
+  } 
 }

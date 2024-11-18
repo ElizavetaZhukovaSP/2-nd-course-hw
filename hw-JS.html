@@ -6,6 +6,102 @@
     <title>HomeworkJS</title>
 </head>
 <body>
-    <script src="hw-8.js"></script>
+    <h3>Задание №1</h3>
+    <button class="btn">Скрыть</button>
+    <div class="content"></div>
+
+    <h3>Задание №2</h3>
+    <p class="text">Lorem ipsum dolor sit amet consectetur.</p>
+    <button class="btnColor">Изменить цвет</button>
+
+    <h3>Задание №3</h3>
+    <h2 class="headHi">Нажми на кнопку ниже</h2>
+    <button class="btnHi">Изменить текст</button>
+
+
+    <h3>Задание №4</h3>
+    <p class="description">Lorem, ipsum dolor.</p>
+    <p class="description">Lorem ipsum dolor sit.</p>
+    <p class="description">Lorem ipsum dolor sit amet.</p>
+
+
+    <h3>Задание №5</h3>
+    <p class="description5">Lorem, ipsum dolor.</p>
+    <p class="text5">Lorem ipsum dolor sit.</p>
+    <p class="description5">Lorem, ipsum dolor.</p>
+    <p class="text5">Lorem ipsum dolor sit.</p>
+    <p class="text5">Lorem ipsum dolor sit.</p>
+    <p class="description5">Lorem ipsum dolor sit amet.</p>
+
+
+    <h3>Задание №6</h3>
+    <button class="btnAdd">Добавить элемент</button>
+    <div class="contentAdd"></div>
+
+    <h3>Задание №7</h3>
+
+    <p class="text7">Lorem ipsum dolor sit.</p>
+    <p class="description7">Lorem, ipsum dolor. Lorem, ipsum. </p>
+    <p class="text7">Lorem ipsum dolor sit. Lorem, ipsum.</p>
+    <p class="text7">Lorem ipsum dolor sit. Lorem, ipsum dolor.</p>
+    <p class="description7">Lorem ipsum dolor sit amet.</p>
+    <button class="btnDelete">Удалить элемент</button>
+
+
+    <script>
+        //task 1       
+        const btnEl = document.querySelector('.btn');
+        const contentEl = document.querySelector('.content');
+        
+        btnEl.addEventListener('click', () => {
+            contentEl.innerHTML = `
+            <h1 class="heading">Заголовок</h1>`;
+        })
+        //task 2
+        const textEl = document.querySelector('.text');
+        const btnElColor = document.querySelector('.btnColor');
+        btnElColor.addEventListener('click', () => {
+            textEl.style.color = 'blue';
+        })
+        //task 3
+        const headHiEl = document.querySelector('.headHi');
+        const btnHiEl = document.querySelector('.btnHi');
+        btnHiEl.addEventListener('click', () => {
+            headHiEl.textContent= 'Привет, Мир!';
+            headHiEl.style.color = 'green';
+        })
+        //task 4
+        const allDescription = document.querySelectorAll('.description');
+        console.log(allDescription);
+        allDescription.forEach(description => {
+            description.textContent = 'Измененный текст';
+        })
+
+        //task 5
+        const allDescription5 = document.querySelectorAll('.description5');
+        console.log(allDescription5);
+        allDescription5.forEach(description5 => {
+            description5.textContent = 'Новый текст';
+        })
+                
+        //task 6
+        const btnAddEl = document.querySelector('.btnAdd');
+        const contentAddEl = document.querySelector('.contentAdd');
+
+        btnAddEl.addEventListener('click', () => {
+            const headAdd = document.createElement('h2');
+            headAdd.textContent = 'Новый абзац';
+            headAdd.classList.add ('headingAdd');
+            contentAddEl.append(headAdd);
+        })
+
+        //task 7
+        
+        const btnDeleteEl = document.querySelector('.btnDelete');
+        btnDeleteEl.addEventListener('click', () => {
+            const description7El = document.querySelector('.description7');
+            description7El.remove();
+        })
+    </script>
 </body>
 </html>

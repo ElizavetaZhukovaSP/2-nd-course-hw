@@ -149,3 +149,21 @@ function RockScissorsPaper () {
     RockScissorsPaper()
   } 
 }
+// Функция для генерации случайного цвета
+function RandomColorGenerator(){
+  const element = document.querySelector('.game-box');
+
+  function getRandomColor() {
+    var r = Math.floor(Math.random() * 256); // Генерация случайного числа от 0 до 255 для красного канала
+    var g = Math.floor(Math.random() * 256); // Генерация случайного числа от 0 до 255 для зелёного канала
+    var b = Math.floor(Math.random() * 256); // Генерация случайного числа от 0 до 255 для синего канала
+  
+    return "rgb(" + r + ", " + g + ", " + b + ")";
+  }
+  let color = getRandomColor();
+  console.log(color);
+  element.style.backgroundColor = color ;
+}
+
+
+

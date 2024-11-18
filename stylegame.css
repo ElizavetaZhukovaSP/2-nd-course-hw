@@ -36,7 +36,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  width: 769px;
+  max-width: 769px;
   padding-top: 196px;
 }
 
@@ -76,6 +76,47 @@ body {
 .top__button:hover {
   background: white;
   color: black;
+}
+
+.strip-animation {
+  background-color: #BCEC30;
+  max-width: 200em;
+  overflow: hidden;
+}
+
+.animation {
+  width: 200em;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 51px;
+  height: 90px;
+  animation: scrloll-Left-Rirht 10s linear infinite;
+}
+
+@keyframes scrloll-Left-Rirht {
+  from {
+    transform: translatex(0%);
+  }
+  to {
+    transform: translatex(-53%);
+  }
+}
+.animation-text {
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 33px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  padding-top: 27px;
+  text-wrap: nowrap;
+}
+
+.animation-star {
+  width: 36px;
+  height: 36px;
+  padding-top: 27px;
+  padding-bottom: 27px;
 }
 
 .info-box {
@@ -274,6 +315,26 @@ body {
   font-family: Montserrat;
 }
 .button-play:hover {
+  background: white;
+  color: black;
+}
+
+.buttonColor-play {
+  box-sizing: border-box;
+  border: 1px solid rgb(32, 32, 39);
+  border-radius: 60px;
+  background: rgb(32, 32, 39);
+  width: 247px;
+  height: 66px;
+  margin-top: 36px;
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 141.69%;
+  text-align: center;
+  font-family: Montserrat;
+}
+.buttonColor-play:hover {
   background: white;
   color: black;
 }
